@@ -1,20 +1,82 @@
 /* Show it is fixed to the top */
-main {
-    min-height: 75rem;
-    padding-top: 4.5rem;
+
+.bg-yoreme {
+    /* --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity))!important;
+     */
 }
 
-
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+#yoreme--videos {
+    width: 100%;
+    height: auto;
+    position: relative;
 }
 
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-    }
+.yoreme-video-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yoreme--info-card {
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    /* background-color: #ffffff40; */
+    /* padding: 30px; */
+    /* width: 150px; */
+    /* height: 150px; */
+    /* border-radius: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+.yoreme-play-items {
+    color: white;
+    display: flex;
+    gap: 10px;
+    font-size: 10pt;
+    cursor: pointer;
+}
+
+.yoreme--info-card>i {
+    color: white;
+    font-size: 55pt;
+}
+
+#yoreme--navbar {
+    z-index: 4;
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity))!important;
+    position: fixed;
+    top: -100px;
+    width: 100%;
+    display: flex;
+    transition: top 0.3s;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+#yoreme--navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#yoreme--navbar a:hover {
+    background-color: #ddd;
+    color: black;
 }
