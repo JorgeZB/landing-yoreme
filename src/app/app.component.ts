@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
 
     ngOnInit(): void {
         // window.scrollTo(0, 0); // values are x,y-offset
-        this.playVideo();
+        // this.playVideo();
 
     }
 
