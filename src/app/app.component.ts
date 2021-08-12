@@ -43,18 +43,61 @@ export class AppComponent implements OnInit {
 
     // pauseVideo(){
     //     let v: any = document.getElementById('yoreme--videos');
-    //     v.pause(); 
+    //     v.pause();
     // }
 
 
     muteVideo() {
         let v: any = document.getElementById('yoreme--videos');
-        if(v.muted){
+        if (v.muted) {
             this.volumenIcon = 'volume-up';
-        }else{
+        } else {
             this.volumenIcon = 'volume-mute';
         }
         v.muted = !v.muted;
     }
 
+
+    // Data
+    dataCollections = [
+        {
+            "image": "assets/images/reserva-2016.png",
+            "title": "Danza del venado",
+            "edition": "Edición 2016",
+            "autor": "Ricardo Escalante"
+        },
+        {
+            "image": "assets/images/reserva-2018.png",
+            "title": "Cabeza de ganado",
+            "edition": "Edición 2018",
+            "autor": "Ángel Luzanilla"
+        },
+        {
+            "image": "assets/images/reserva-2021.png",
+            "title": "Lo indispensable",
+            "edition": "Edición 2021",
+            "autor": "Ebeth Roldan"
+        }
+    ]
+
+    dataRate = [
+        {
+            "name": "Isai Aleman",
+            "occupation": "Restaurantero",
+            "title": "¡La calidad es incomparable!",
+            "opinion": "Tempor nisi exercitation laborum voluptate laborum do qui qui incididunt nulla consequat. Nostrud eiusmod sint fugiat nostrud cillum consequat elit anim nisi commodo adipisicing dolore deserunt aute. Fugiat esse nulla sunt sint duis sit aute enim minim labore cupidatat et incididunt dolore."
+        },
+        {
+            "name": "Andrea López",
+            "occupation": "Gerente",
+            "title": "¡El servicio es fascinante!",
+            "opinion": "Tempor nisi exercitation laborum voluptate laborum do qui qui incididunt nulla consequat. Nostrud eiusmod sint fugiat nostrud cillum consequat elit anim nisi commodo adipisicing dolore deserunt aute. Fugiat esse nulla sunt sint duis sit aute enim minim labore cupidatat et incididunt dolore."
+        },
+        {
+            "name": "Jorge Zaragoza",
+            "occupation": "Consumidor",
+            "title": "¡Los cortes son muy finos!",
+            "opinion": "Tempor nisi exercitation laborum voluptate laborum do qui qui incididunt nulla consequat. Nostrud eiusmod sint fugiat nostrud cillum consequat elit anim nisi commodo adipisicing dolore deserunt aute. Fugiat esse nulla sunt sint duis sit aute enim minim labore cupidatat et incididunt dolore."
+        },
+    ]
 }

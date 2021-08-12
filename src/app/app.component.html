@@ -2,7 +2,7 @@
     <div class="container-fluid d-flex justify-content-center">
         <img src="assets/images/logo-02.png" alt="" style="width: 15%;">
     </div>
-</nav> 
+</nav>
 -->
 
 <main class="yoreme--container">
@@ -44,7 +44,7 @@
             </p>
         </div>
     </div>
-    
+
     <div class="yoreme-content-img">
         <img src="assets/images/bloque-s201.png" alt="">
         <div class="yc-img-info">
@@ -57,32 +57,86 @@
         </div>
     </div>
 
-    <div class="content">
-        <h3>Sticky Navigation Example</h3>
-        <p>The navbar will stick to the top when you reach its scroll position.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <div class="bloque-3">
+        <div class="row">
+            <div class="aligned-center">
+                <br><br>
+                <h3 style="font-family: zeppelin-42-regular;">COLECCIÓN</h3>
+                <h5 style="font-family: manrope-light;">Descubre nuestra colección de Reservas Especiales, vestidas con
+                    obras de arte exclusivas que transmiten la
+                    esencia de nuestra región, realizadas por artistas reconocidos.</h5>
+            </div>
+            <div class="col-md-4 center-card" *ngFor="let collection of this.dataCollections">
+                <div class="card-b3">
+                    <img src={{collection.image}} alt="" width="100%" />
+                    <br><br>
+                    <h4 style="font-family: manrope-semibold;">{{collection.edition}}</h4>
+                    <h6 style="font-family: manrope-light;">{{collection.title}}</h6>
+                    <h6 style="font-family: manrope-light;">Autor: {{collection.autor}}</h6>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <div class="bloque-4">
+        <div class="row">
+            <div class="col-md-4 center-card" *ngFor="let rate of dataRate">
+                <div class="card-b4">
+                    <h3 style="font-family: manrope-semibold;">{{rate.name}}</h3>
+                    <h5 style="font-family: manrope-light;">{{rate.occupation}}</h5>
+                    <img src="assets/images/triangles-decoration.png" alt="" width="100%" />
+                    <br><br>
+                    <h4 style="font-family: manrope-bold;">{{rate.title}}</h4>
+                    <h6 class="card-text" style="font-family: manrope-light;">{{rate.opinion}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="bloque-5">
+        <div class="row">
+            <div class="col-md-6 aligned-center">
+                <img src="assets/images/logo-02.png" alt="" width="50%" />
+            </div>
+            <div class="col-md-6 aligned-center">
+                <h2 class="text-black" style="font-family: zeppeling-42-regular;">UNA RESERVA ESPECIAL PARA
+                    CLIENTES
+                    ESPECIALES
+                </h2>
+                <h5 class="text-black" style="font-family: manrope-light;">Para adquirir tu Reserva Especial
+                    2021
+                    contacta a
+                    nuestra representante de ventas Ailed
+                    Álvarez Alvarado por medio de Whatsapp</h5>
+                <div class="container-button">
+                    <a class="fab fa-whatsapp button border-button-whatsapp"
+                        href="https://wa.me/+526442465346/?text=Hola"> Mandar
+                        mensaje</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bloque-6">
+        <div class="row">
+            <div class="col-md-6 aligned-center">
+                <img src="assets/images/logo-02.png" alt="" width="50%" />
+            </div>
+            <div class="col-md-6 aligned-center">
+                <h2 class="text-white" style="font-family: zeppeling-42-regular;">SELECCIÓN EXCLUSIVA</h2>
+                <h5 class="text-white" style="font-family: manrope-light;">Te presentamos nuestro catálogo de
+                    reservas,
+                    en el
+                    cual podrás seleccionar tu corte de
+                    muestra selección de Rib Eye y New York</h5>
+                <div class="container-button">
+                    <a class="fa fa-download button border-button"
+                        href="https://drive.google.com/drive/folders/1_KuOoDFLl6cXTKyFjDG3FY1AAiBZMoXF?usp=sharing">
+                        Descargar
+                        catálogo</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </main>
