@@ -3,6 +3,10 @@
     margin-left: 0;
 }
 
+.bold{
+    font-weight: bold;
+}
+
 #yoreme--videos {
     width: 100%;
     height: auto;
@@ -83,11 +87,17 @@
 }
 
 .yc-sec-1, .yc-sec-2 {
-    width: 35%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: justify;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: manrope-light;
+}
+
+.yc-sec-2 > p:first-of-type{
+    font-style: italic;
 }
 
 .yc-sec-1>img {
@@ -120,10 +130,16 @@
 .yc-img-info>h3 {
     text-align: center;
     margin-bottom: 20px;
+    font-family: zeppeling-42-regular;
+    font-size: 15pt;
+    letter-spacing: 2px;
 }
 
 .yc-img-info>p {
     text-align: center;
+    font-size: 14pt;
+    font-family: manrope-light;
+    letter-spacing: 1px;
 }
 
 .bloque-3 {
