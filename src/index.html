@@ -25,10 +25,37 @@
 
     <!-- animate.style -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- WOW.js -->
+    <script src="/assets/js/wow.min.js"></script>
 </head>
 
 <body>
     <app-root></app-root>
+    <a href="#" class="scrollup">Scroll</a>
+
+    <script>
+        new WOW().init();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('.scrollup').fadeIn();
+                } else {
+                    $('.scrollup').fadeOut();
+                }
+            });
+
+            $('.scrollup').click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 100);
+                return false;
+            });
+        });
+    </script>
 </body>
 
 </html>
