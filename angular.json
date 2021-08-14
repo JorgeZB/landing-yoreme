@@ -24,9 +24,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/animate.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/wow.min.js"
+            ]
           },
           "configurations": {
             "production": {

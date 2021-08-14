@@ -84,6 +84,7 @@
     align-items: center;
     padding: 4%;
     background-color: #FFF2E4;
+    overflow-x: hidden;
 }
 
 .yc-sec-1, .yc-sec-2 {

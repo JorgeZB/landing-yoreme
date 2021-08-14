@@ -14,7 +14,8 @@ export class AppComponent implements OnInit {
 
 
     ngOnInit(): void {
-        this.playVideo();
+        
+        // this.playVideo();
     }
 
     @HostListener("window:scroll")
