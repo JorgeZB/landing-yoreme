@@ -3,13 +3,11 @@
 </div>
 
 <main class="yoreme--container">
-
-    
     <div class="yoreme-video-card">
         <div class="yoreme--info-card">
             <img src="assets/images/logo-02.png" alt="" style="width: 50%;">
             <div class="yoreme-play-items">
-                <i [class]="'fa fa-'+primaryIcon" (click)='playVideo()'></i>
+                <i [class]="'fa fa-'+primaryIcon" (click)='playVideo(); masterPause = !masterPause;'></i>
                 <!-- <i class="fa fa-pause" (click)='pauseVideo()'></i> -->
                 <i [class]="'fas fa-'+volumenIcon" (click)='muteVideo()'></i>
             </div>
@@ -17,7 +15,7 @@
         </div>
 
         <video loop id="yoreme--videos">
-            <source src="assets/videos/01.mp4" type="video/mp4">
+            <source src="assets/videos/RESERVA_ESPECIAL.mp4" type="video/mp4">
         </video>
     </div>
 

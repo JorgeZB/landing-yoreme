@@ -1,33 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 
 @font-face {
-  font-family: manrope-light;
-  src: url(assets/fonts/manrope/manrope-light.ttf) format("opentype");
+    font-family: manrope-light;
+    src: url(assets/fonts/manrope/manrope-light.ttf) format("opentype");
 }
 
 @font-face {
-  font-family: manrope-semibold;
-  src: url(assets/fonts/manrope/manrope-semibold.ttf) format("opentype");
+    font-family: manrope-semibold;
+    src: url(assets/fonts/manrope/manrope-semibold.ttf) format("opentype");
 }
 
 @font-face {
-  font-family: manrope-bold;
-  src: url(assets/fonts/manrope/manrope-bold.ttf) format("opentype");
+    font-family: manrope-bold;
+    src: url(assets/fonts/manrope/manrope-bold.ttf) format("opentype");
 }
 
 @font-face {
-  font-family: zeppeling-42-regular;
-  src: url(assets/fonts/zeppelin/zeppelin-42-regular.otf) format("opentype");
+    font-family: zeppeling-42-regular;
+    src: url(assets/fonts/zeppelin/zeppelin-42-regular.otf) format("opentype");
 }
 
 .scrollup {
-  width: 40px;
-  height: 40px;
-  opacity: 0.7;
-  position: fixed;
-  bottom: 10%;
-  right: 2%;
-  display: none;
-  text-indent: -9999px;
-  background: url(icon_top.png) no-repeat;
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    display: none;
+    text-indent: -9999px;
+    background: url(icon_top.png) no-repeat;
 }

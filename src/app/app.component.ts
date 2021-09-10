@@ -9,13 +9,13 @@ export class AppComponent implements OnInit {
 
     title = 'landingY1';
     isPlaying: boolean = false;
+    masterPause: boolean = false;
     primaryIcon: string = 'pause';
     volumenIcon: string = 'volume-up';
 
 
     ngOnInit(): void {
-        
-        // this.playVideo();
+        this.playVideo();
     }
 
     @HostListener("window:scroll")
@@ -24,6 +24,17 @@ export class AppComponent implements OnInit {
             document.getElementById("yoreme--navbar").style.top = "0";
         } else {
             document.getElementById("yoreme--navbar").style.top = "-100px";
+            if (!this.masterPause) {
+                if (!this.isPlaying) {
+                    this.playVideo();
+                }
+            }
+        }
+
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+            if (this.isPlaying) {
+                this.playVideo();
+            }
         }
     }
 

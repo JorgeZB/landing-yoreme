@@ -3,7 +3,7 @@
     margin-left: 0;
 }
 
-.bold{
+.bold {
     font-weight: bold;
 }
 
@@ -97,7 +97,7 @@
     font-family: manrope-light;
 }
 
-.yc-sec-2 > p:first-of-type{
+.yc-sec-2>p:first-of-type {
     font-style: italic;
 }
 
@@ -184,12 +184,11 @@
 }
 
 .card-b4>p {
-
-  font-size: 14pt;
-  font-family: manrope-light;
-  letter-spacing: 1px;
-  text-align: justify !important;
-  color: gray;
+    font-size: 14pt;
+    font-family: manrope-light;
+    letter-spacing: 1px;
+    text-align: justify !important;
+    color: gray;
 }
 
 .bloque-5 {
@@ -223,12 +222,12 @@
 }
 
 .aligned-center>p {
-  margin-left: 10%;
-  margin-right: 10%;
-  text-align: center;
-  font-size: 16pt;
-  font-family: manrope-light;
-  letter-spacing: 1px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    font-size: 16pt;
+    font-family: manrope-light;
+    letter-spacing: 1px;
 }
 
 .center-card {
@@ -255,16 +254,16 @@
 }
 
 .text-bloques {
-  width: 100%;
+    width: 100%;
 }
 
 .text-bloques>p {
-  margin-left: 10%;
-  margin-right: 10%;
-  text-align: center;
-  font-size: 16pt;
-  font-family: manrope-light;
-  letter-spacing: 1px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    font-size: 16pt;
+    font-family: manrope-light;
+    letter-spacing: 1px;
 }
 
 .container-button {
@@ -290,4 +289,71 @@
     padding: 10px;
     text-decoration: none;
     font-size: 24px !important;
+}
+
+@media (max-width: 800px) {
+    .yoreme--info-card>i {
+        font-size: 25pt;
+    }
+
+    .yoreme-content-1 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .yc-sec-1, .yc-sec-2 {
+        width: 90%;
+    }
+
+    .yc-sec-1>img {
+        width: 55%;
+    }
+
+    .yc-sec-2 > img{
+        width: 80%;
+    }
+
+    .yc-img-info {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(0px, 0px);
+        width: 100%;
+        padding: 6%;
+        color: white;
+    }
+
+    
+
+    .yoreme-content-img {
+        position: relative;
+        width: 100%;
+        background-color: #FFF2E4;
+    }
+    
+    .yoreme-content-img>img {
+        display: none;
+    }
+    
+    .yc-img-info {
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: translate(0px, 0px);
+        width: 100%;
+        padding: 6%;
+        color: black;
+    }
+    
+    .yc-img-info > p{
+        font-size: 1.1rem;
+    }
+    
+    .yc-img-info > h3 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-family: zeppeling-42-regular;
+        font-size: 10pt;
+        letter-spacing: 2px;
+    }
 }
