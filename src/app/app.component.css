@@ -175,8 +175,9 @@
 }
 
 .card-b4 {
-    width: 60%;
+    width: 80%;
     height: auto;
+    min-height: 350px;
     margin: 10px;
     padding: 20px;
     background-color: #fff2e4;
@@ -323,18 +324,18 @@
         color: white;
     }
 
-    
+
 
     .yoreme-content-img {
         position: relative;
         width: 100%;
         background-color: #FFF2E4;
     }
-    
+
     .yoreme-content-img>img {
         display: none;
     }
-    
+
     .yc-img-info {
         position: relative;
         top: 0;
@@ -344,11 +345,11 @@
         padding: 6%;
         color: black;
     }
-    
+
     .yc-img-info > p{
         font-size: 1.1rem;
     }
-    
+
     .yc-img-info > h3 {
         text-align: center;
         margin-bottom: 10px;

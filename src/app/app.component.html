@@ -40,8 +40,8 @@
     <div class="yoreme-content-img">
         <img src="assets/images/bloque-s201.png" alt="">
         <div class="yc-img-info">
-            <h3>CALIDAD CON GARANTÍA</h3>
-            <p>
+            <h3 class="wow bounceInUp">CALIDAD CON GARANTÍA</h3>
+            <p class="wow bounceInUp">
                 Los cortes más exclusivos, con el grado más alto de marmoleo y suavidad. Cada año seleccionamos nuestra
                 mejor reserva de <span class="bold">Rib Eye y New York</span>, para aquellos paladares sofisticados que
                 no le
@@ -53,7 +53,7 @@
 
     <div class="bloque-3">
         <div class="row">
-            <div class="aligned-center text-bloques">
+            <div class="aligned-center text-bloques wow bounceInLeft">
                 <h3 style="font-family: zeppelin-42-regular;">COLECCIÓN</h3>
                 <p>Descubre nuestra colección de Reservas Especiales,
                     vestidas con
@@ -61,7 +61,7 @@
                     esencia de nuestra región, realizadas por artistas reconocidos.</p>
             </div>
             <div class="col-md-4 center-card" *ngFor="let collection of this.dataCollections">
-                <div class="card-b3">
+                <div class="card-b3 wow bounceInRight">
                     <img src={{collection.image}} alt="" width="100%" />
                     <br><br>
                     <h4 style="font-family: manrope-semibold;">{{collection.edition}}</h4>
@@ -74,14 +74,34 @@
 
     <div class="bloque-4">
         <div class="row">
-            <div class="col-md-4 center-card" *ngFor="let rate of dataRate">
+            <div class="col-md-4 center-card wow bounceInLeft">
                 <div class="card-b4">
-                    <h3 style="font-family: manrope-semibold;">{{rate.name}}</h3>
-                    <h5 style="font-family: manrope-light;">{{rate.occupation}}</h5>
+                    <h3 style="font-family: manrope-semibold;">Javier Castelo</h3>
                     <img src="assets/images/triangles-decoration.png" alt="" width="100%" />
                     <br><br>
-                    <h4 style="font-family: manrope-bold;">{{rate.title}}</h4>
-                    <p class="card-text">{{rate.opinion}}</p>
+                    <p class="card-text"><strong>La calidad Yoreme es de lo mejor que tenemos en Sonora</strong> y los
+                        cortes
+                        Reserva Especial se llevan un 100.</p>
+                </div>
+            </div>
+            <div class="col-md-4 center-card wow bounceInUp">
+                <div class="card-b4">
+                    <h3 style="font-family: manrope-semibold;">Alberto Borquez</h3>
+                    <img src="assets/images/triangles-decoration.png" alt="" width="100%" />
+                    <br><br>
+                    <p class="card-text">Me sorprendió la calidad, los sabores tan definidos y una textura suave.
+                        Dificilmente se
+                        encontrará algo con ese nivel. <strong>Sin duda es la carne de México.</strong></p>
+                </div>
+            </div>
+            <div class="col-md-4 center-card wow bounceInRight">
+                <div class="card-b4">
+                    <h3 style="font-family: manrope-semibold;">Fausto Alcalá</h3>
+                    <img src="assets/images/triangles-decoration.png" alt="" width="100%" />
+                    <br><br>
+                    <p class="card-text">Los cortes son de primer nivel, la caja de la Reserva es una completa obra de
+                        arte y lo
+                        mejor es la experiencia de tener un producto de <strong>calidad incomparable.</strong></p>
                 </div>
             </div>
         </div>
@@ -89,10 +109,10 @@
 
     <div class="bloque-5">
         <div class="row">
-            <div class="col-md-6 aligned-center">
+            <div class="col-md-6 aligned-center wow bounceInRight">
                 <img src="assets/images/seller.png" alt="" width="40%" />
             </div>
-            <div class="col-md-6 aligned-center">
+            <div class="col-md-6 aligned-center wow bounceInLeft">
                 <h2 class="text-black" style="font-family: zeppeling-42-regular;">UNA RESERVA ESPECIAL PARA
                     CLIENTES
                     ESPECIALES
@@ -114,10 +134,10 @@
 
     <div class="bloque-6">
         <div class="row">
-            <div class="col-md-6 aligned-center">
+            <div class="col-md-6 aligned-center wow bounceInUp">
                 <img src="assets/images/pre-catalogo-2.png" alt="" width="100%" />
             </div>
-            <div class="col-md-6 aligned-center">
+            <div class="col-md-6 aligned-center wow bounceInUp">
                 <h2 class="text-white" style="font-family: zeppeling-42-regular;">SELECCIÓN EXCLUSIVA</h2>
                 <p class="text-white">Te presentamos nuestro catálogo de
                     reservas,
