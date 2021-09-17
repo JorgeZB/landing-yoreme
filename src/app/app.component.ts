@@ -31,11 +31,11 @@ export class AppComponent implements OnInit {
             }
         }
 
-        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-            if (this.isPlaying) {
-                this.playVideo();
-            }
-        }
+        // if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        //     if (this.isPlaying) {
+        //         this.playVideo();
+        //     }
+        // }
     }
 
     playVideo() {
@@ -88,26 +88,5 @@ export class AppComponent implements OnInit {
             "edition": "Edición 2021",
             "autor": "Ebeth Roldan"
         }
-    ]
-
-    dataRate = [
-        {
-            "name": "Isai Aleman",
-            "occupation": "Restaurantero",
-            "title": "¡La calidad es incomparable!",
-            "opinion": "Tempor nisi exercitation laborum voluptate laborum do qui qui incididunt nulla consequat. Nostrud eiusmod sint fugiat nostrud cillum consequat elit anim nisi commodo adipisicing dolore deserunt aute. Fugiat esse nulla sunt sint duis sit aute enim minim labore cupidatat et incididunt dolore."
-        },
-        {
-            "name": "Andrea López",
-            "occupation": "Gerente",
-            "title": "¡El servicio es fascinante!",
-            "opinion": "Tempor nisi exercitation laborum voluptate laborum do qui qui incididunt nulla consequat. Nostrud eiusmod sint fugiat nostrud cillum consequat elit anim nisi commodo adipisicing dolore deserunt aute. Fugiat esse nulla sunt sint duis sit aute enim minim labore cupidatat et incididunt dolore."
-        },
-        {
-            "name": "Jorge Zaragoza",
-            "occupation": "Consumidor",
-            "title": "¡Los cortes son muy finos!",
-            "opinion": "Tempor nisi exercitation laborum voluptate laborum do qui qui incididunt nulla consequat. Nostrud eiusmod sint fugiat nostrud cillum consequat elit anim nisi commodo adipisicing dolore deserunt aute. Fugiat esse nulla sunt sint duis sit aute enim minim labore cupidatat et incididunt dolore."
-        },
     ]
 }
