@@ -1,30 +1,33 @@
 <div id="yoreme--navbar">
-    <img src="assets/images/logo-02.png" alt="" style="width: 15%;">
+    <img src="assets/images/logo-02.png" alt="" style="width: 15%;" loading="lazy">
 </div>
 
 <main class="yoreme--container">
     <div class="yoreme-video-card">
-        <div class="yoreme--info-card">
-            <img src="assets/images/logo-02.png" alt="" style="width: 50%;">
+        <div *ngIf="!isCompleteLoading" class="yoreme--video-loading">
+            <i class="fas fa-spinner fa-spin"></i>
+        </div>
+        <div *ngIf="isCompleteLoading" class="yoreme--info-card" [class.hideVideo]="!isShowCardVideo" (mouseenter)="onMouseEnter()"
+            (mouseleave)="onMouseLave()">
+            <img src="assets/images/logo-02.png" alt="" style="width: 50%;" loading="lazy">
             <div class="yoreme-play-items">
-                <i [class]="'fa fa-'+primaryIcon" (click)='playVideo(); masterPause = !masterPause;'></i>
-                <!-- <i class="fa fa-pause" (click)='pauseVideo()'></i> -->
+                <i [class]="'fa fa-'+primaryIcon" (click)='playVideo();'></i>
                 <i [class]="'fas fa-'+volumenIcon" (click)='muteVideo()'></i>
             </div>
             <i class="fas fa-long-arrow-alt-down animate__animated animate__fast animate__infinite animate__pulse"></i>
         </div>
 
-        <video loop id="yoreme--videos">
-            <source src="assets/videos/RESERVA_ESPECIAL.mp4" type="video/mp4">
+        <video loop id="yoreme--videos" preload="auto">
+            <source [src]="'assets/videos/'+statucVideoName" type="video/mp4">
         </video>
     </div>
 
     <div class="yoreme-content-1">
         <div class="yc-sec-1 wow bounceInLeft">
-            <img src="assets/images/bloque-s101.png" alt="">
+            <img src="assets/images/bloque-s101.png" alt="" loading="lazy">
         </div>
         <div class="yc-sec-2 wow bounceInRight">
-            <img src="assets/images/bloque-s102.png" alt="">
+            <img src="assets/images/bloque-s102.png" alt="" loading="lazy">
             <p>
                 “Cual magia es el sentir de provocar y tener el control sobre el fuego desde los tiempos donde la
                 humanidad aprendió el dominio de este elemento brillante y abrasador”
@@ -36,9 +39,8 @@
             </p>
         </div>
     </div>
-
     <div class="yoreme-content-img">
-        <img src="assets/images/bloque-s201.png" alt="">
+        <img src="assets/images/bloque-s201.png" alt="" loading="lazy">
         <div class="yc-img-info">
             <h3 class="wow bounceInUp">CALIDAD CON GARANTÍA</h3>
             <p class="wow bounceInUp">
@@ -50,7 +52,6 @@
             </p>
         </div>
     </div>
-
     <div class="bloque-3">
         <div class="row">
             <div class="aligned-center text-bloques wow bounceInLeft">
@@ -71,23 +72,26 @@
             </div>
         </div>
     </div>
-
-    <div class="bloque-4">
+    <div class="bloque-4" style="display: none;">
         <div class="row">
             <div class="col-md-4 center-card wow bounceInLeft">
                 <div class="card-b4">
-                    <h3 style="font-family: manrope-semibold;">Javier Castelo</h3>
-                    <img src="assets/images/triangles-decoration.png" alt="" width="100%" />
+                    <h3 style="font-family: manrope-semibold;">Agustin Covarrubias</h3>
+                    <img src="assets/images/triangles-decoration.png" alt="" width="100%" loading="lazy" />
                     <br><br>
-                    <p class="card-text"><strong>La calidad Yoreme es de lo mejor que tenemos en Sonora</strong> y los
-                        cortes
-                        Reserva Especial se llevan un 100.</p>
+                    <p class="card-text">
+                        <strong>Carne de calidad mundial.</strong> <br>
+                        De las mejores experiencias gastronómicas a la parrilla, su brillante color rojo impacta y
+                        enamora al comensal, gracias a su perfecto marmoleo obliga al corte a tener una suavidad y sabor
+                        espectacular, sin duda alguna la experiencia Yoreme coloca a Sonora como referencia en calidad
+                        de carne.
+                    </p>
                 </div>
             </div>
             <div class="col-md-4 center-card wow bounceInUp">
                 <div class="card-b4">
                     <h3 style="font-family: manrope-semibold;">Alberto Borquez</h3>
-                    <img src="assets/images/triangles-decoration.png" alt="" width="100%" />
+                    <img src="assets/images/triangles-decoration.png" alt="" width="100%" loading="lazy" />
                     <br><br>
                     <p class="card-text">Me sorprendió la calidad, los sabores tan definidos y una textura suave.
                         Dificilmente se
@@ -97,7 +101,7 @@
             <div class="col-md-4 center-card wow bounceInRight">
                 <div class="card-b4">
                     <h3 style="font-family: manrope-semibold;">Fausto Alcalá</h3>
-                    <img src="assets/images/triangles-decoration.png" alt="" width="100%" />
+                    <img src="assets/images/triangles-decoration.png" alt="" width="100%" loading="lazy" />
                     <br><br>
                     <p class="card-text">Los cortes son de primer nivel, la caja de la Reserva es una completa obra de
                         arte y lo
@@ -106,11 +110,10 @@
             </div>
         </div>
     </div>
-
     <div class="bloque-5">
         <div class="row">
             <div class="col-md-6 aligned-center wow bounceInRight">
-                <img src="assets/images/seller.png" alt="" width="40%" />
+                <img src="assets/images/seller.png" alt="" width="40%" loading="lazy" />
             </div>
             <div class="col-md-6 aligned-center wow bounceInLeft">
                 <h2 class="text-black" style="font-family: zeppeling-42-regular;">UNA RESERVA ESPECIAL PARA
@@ -123,19 +126,18 @@
                     nuestra representante de ventas Ailed
                     Álvarez Alvarado por medio de Whatsapp</p>
                 <div class="container-button">
-                    <a class="fab fa-whatsapp button border-button-whatsapp"
-                        href="https://wa.me/+526441000305/?text=Hola está es una prueba desde el botón de la landing">
+                    <a class="fab fa-whatsapp button border-button-whatsapp" target="_blank"
+                        href="https://wa.me/+5216442358407/">
                         Mandar
                         mensaje</a>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="bloque-6">
         <div class="row">
             <div class="col-md-6 aligned-center wow bounceInUp">
-                <img src="assets/images/pre-catalogo-2.png" alt="" width="100%" />
+                <img src="assets/images/pre-catalogo-3.png" alt="" width="100%" loading="lazy" />
             </div>
             <div class="col-md-6 aligned-center wow bounceInUp">
                 <h2 class="text-white" style="font-family: zeppeling-42-regular;">SELECCIÓN EXCLUSIVA</h2>
@@ -143,15 +145,14 @@
                     reservas,
                     en el
                     cual podrás seleccionar tu corte de
-                    muestra selección de Rib Eye y New York</p>
+                    nuestra selección de Rib Eye y New York</p>
                 <div class="container-button">
-                    <a class="fa fa-download button border-button"
-                        href="https://drive.google.com/drive/folders/1_KuOoDFLl6cXTKyFjDG3FY1AAiBZMoXF?usp=sharing">
+                    <a class="fa fa-download button border-button" target="_blank"
+                        href="https://drive.google.com/drive/folders/1vldHUakjOnChisO21AAMY6q79DbanAa2?usp=sharing">
                         Descargar
                         catálogo</a>
                 </div>
             </div>
         </div>
     </div>
-
 </main>

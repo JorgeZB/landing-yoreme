@@ -7,7 +7,12 @@
     font-weight: bold;
 }
 
+.yoreme--container {
+    overflow-x: hidden;
+}
+
 #yoreme--videos {
+    background: #ecf0f1;
     width: 100%;
     height: auto;
     position: relative;
@@ -20,6 +25,7 @@
     align-items: center;
 }
 
+.yoreme--video-loading,
 .yoreme--info-card {
     position: absolute;
     z-index: 2;
@@ -32,7 +38,17 @@
     flex-direction: column;
     gap: 10px;
     opacity: 1;
-    transition: 0.5s ease;
+    transition: 0.5s ease-in-out;
+}
+
+
+.yoreme--video-loading > i{
+    font-size: 5.2rem;
+}
+
+.yoreme--info-card.hideVideo {
+    /* transition: 1s ease-in-out; */
+    opacity: 0;
 }
 
 .yoreme-play-items {
@@ -143,6 +159,10 @@
     letter-spacing: 1px;
 }
 
+.card-text {
+    font-family: manrope-light;
+}
+
 .bloque-3 {
     background-image: Url('assets/images/background-03.png');
     width: 100%;
@@ -177,7 +197,7 @@
 .card-b4 {
     width: 80%;
     height: auto;
-    min-height: 350px;
+    min-height: 410px;
     margin: 10px;
     padding: 20px;
     background-color: #fff2e4;
@@ -296,24 +316,19 @@
     .yoreme--info-card>i {
         font-size: 25pt;
     }
-
     .yoreme-content-1 {
         flex-direction: column;
         gap: 20px;
     }
-
     .yc-sec-1, .yc-sec-2 {
         width: 90%;
     }
-
     .yc-sec-1>img {
         width: 55%;
     }
-
-    .yc-sec-2 > img{
+    .yc-sec-2>img {
         width: 80%;
     }
-
     .yc-img-info {
         position: absolute;
         top: 0;
@@ -323,19 +338,14 @@
         padding: 6%;
         color: white;
     }
-
-
-
     .yoreme-content-img {
         position: relative;
         width: 100%;
         background-color: #FFF2E4;
     }
-
     .yoreme-content-img>img {
         display: none;
     }
-
     .yc-img-info {
         position: relative;
         top: 0;
@@ -345,12 +355,10 @@
         padding: 6%;
         color: black;
     }
-
-    .yc-img-info > p{
+    .yc-img-info>p {
         font-size: 1.1rem;
     }
-
-    .yc-img-info > h3 {
+    .yc-img-info>h3 {
         text-align: center;
         margin-bottom: 10px;
         font-family: zeppeling-42-regular;

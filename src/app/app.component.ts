@@ -7,15 +7,28 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-    title = 'landingY1';
+    statucVideoName: string = "RESERVA ESPECIAL_V2.mp4";
+    title = 'Reserva Especial Yoreme';
     isPlaying: boolean = false;
-    masterPause: boolean = false;
-    primaryIcon: string = 'pause';
+    isShowCardVideo: boolean = true;
+    isCompleteLoading: boolean = false;
+    primaryIcon: string = 'play';
     volumenIcon: string = 'volume-up';
 
+    constructor() {
+        // setInterval(() => {
+        //     this.isShowCardVideo = false;
+        //     window.scrollTo(0, 0);
+        // }, 3000);
+    }
 
     ngOnInit(): void {
-        this.playVideo();
+        // this.playVideo();
+        let video: any = document.getElementById('yoreme--videos');
+        video.oncanplaythrough = (event) => {
+            this.isCompleteLoading = true;
+            // console.log(event);
+        };
     }
 
     @HostListener("window:scroll")
@@ -24,18 +37,7 @@ export class AppComponent implements OnInit {
             document.getElementById("yoreme--navbar").style.top = "0";
         } else {
             document.getElementById("yoreme--navbar").style.top = "-100px";
-            if (!this.masterPause) {
-                if (!this.isPlaying) {
-                    this.playVideo();
-                }
-            }
         }
-
-        // if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-        //     if (this.isPlaying) {
-        //         this.playVideo();
-        //     }
-        // }
     }
 
     playVideo() {
@@ -51,12 +53,6 @@ export class AppComponent implements OnInit {
         this.isPlaying = !this.isPlaying;
     }
 
-    // pauseVideo(){
-    //     let v: any = document.getElementById('yoreme--videos');
-    //     v.pause();
-    // }
-
-
     muteVideo() {
         let v: any = document.getElementById('yoreme--videos');
         if (v.muted) {
@@ -65,6 +61,14 @@ export class AppComponent implements OnInit {
             this.volumenIcon = 'volume-mute';
         }
         v.muted = !v.muted;
+    }
+
+    onMouseEnter() {
+        this.isShowCardVideo = true;
+    }
+
+    onMouseLave() {
+        this.isShowCardVideo = false;
     }
 
 
