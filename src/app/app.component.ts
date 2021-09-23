@@ -1,5 +1,8 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 
+declare const $: any;
+
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -7,7 +10,9 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-    statucVideoName: string = "RESERVA ESPECIAL_V2.mp4";
+    staticVideoName: string     = "RESERVA ESPECIAL_V2.mp4";
+    staticVideoNameWebm: string = "RESERVA ESPECIAL_V2.webm";
+
     title = 'Reserva Especial Yoreme';
     isPlaying: boolean = false;
     isShowCardVideo: boolean = true;
@@ -25,10 +30,18 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
         // this.playVideo();
         let video: any = document.getElementById('yoreme--videos');
+        
         video.oncanplaythrough = (event) => {
             this.isCompleteLoading = true;
             // console.log(event);
         };
+
+        var $audioX = $('#yoreme--videos');
+        var audioElement = $audioX[0];
+        
+        if (audioElement.readyState > 3) {
+            this.isCompleteLoading = true;
+        }
     }
 
     @HostListener("window:scroll")

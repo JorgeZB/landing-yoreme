@@ -17,8 +17,9 @@
             <i class="fas fa-long-arrow-alt-down animate__animated animate__fast animate__infinite animate__pulse"></i>
         </div>
 
-        <video loop id="yoreme--videos" preload="auto">
-            <source [src]="'assets/videos/'+statucVideoName" type="video/mp4">
+        <video id="yoreme--videos" class="media-document audio iPhone" loop preload="auto" muted playsinline controls="false">
+            <!-- <source [src]="'assets/videos/'+staticVideoName" type="video/mp4"> -->
+            <source [src]="'assets/videos/'+staticVideoNameWebm" type="video/webm">
         </video>
     </div>
 
