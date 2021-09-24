@@ -3,7 +3,7 @@
 </div>
 
 <main class="yoreme--container">
-    <div class="yoreme-video-card">
+    <!-- <div class="yoreme-video-card">
         <div *ngIf="!isCompleteLoading" class="yoreme--video-loading">
             <i class="fas fa-spinner fa-spin"></i>
         </div>
@@ -17,10 +17,25 @@
             <i class="fas fa-long-arrow-alt-down animate__animated animate__fast animate__infinite animate__pulse"></i>
         </div>
 
-        <video id="yoreme--videos" class="media-document audio iPhone" loop preload="auto" muted playsinline controls="false">
-            <!-- <source [src]="'assets/videos/'+staticVideoName" type="video/mp4"> -->
-            <source [src]="'assets/videos/'+staticVideoNameWebm" type="video/webm">
+        <video id="yoreme--videos" class="media-document audio iPhone" loop preload="auto" muted playsinline>
+            <source src="https://reservaespecialyoreme.com/assets/videos/RESERVA%20ESPECIAL_V2.mp4" type="video/mp4" />
+            <source src="https://reservaespecialyoreme.com/assets/videos/RESERVA%20ESPECIAL_V2.webm" type="video/webm" />
         </video>
+    </div>
+     -->
+    <div class="yoreme-video-card">
+
+        <!-- <iframe width="100%" height="600px" src="https://www.youtube-nocookie.com/embed/aLqlzdo8eE8?version=3&loop=1&playlist=aLqlzdo8eE8&rel=0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+         -->
+        <div style="padding:56.25% 0 0 0;"><iframe
+                src="https://player.vimeo.com/video/613042044?h=835ddfc3fb&autoplay=1&loop=1&title=0&byline=0&portrait=0"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+
     </div>
 
     <div class="yoreme-content-1">

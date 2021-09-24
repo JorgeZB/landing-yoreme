@@ -36,12 +36,12 @@ export class AppComponent implements OnInit {
             // console.log(event);
         };
 
-        var $audioX = $('#yoreme--videos');
-        var audioElement = $audioX[0];
+        // var $audioX = $('#yoreme--videos');
+        // var audioElement = $audioX[0];
         
-        if (audioElement.readyState > 3) {
-            this.isCompleteLoading = true;
-        }
+        // if (audioElement.readyState > 3) {
+        //     this.isCompleteLoading = true;
+        // }
     }
 
     @HostListener("window:scroll")
